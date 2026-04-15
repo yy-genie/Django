@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>이 곳에서 할 일을 생성합니다.</h1>
+  <p>추후 기능 추가 예정</p>
+
+  {% comment %} action 속성은 요청을 어느 url로 보낼것인지 정하는 속성{% endcomment %}
+  <form action="/todos/">
+    {% comment %} <input type="text" name="fruit"> 
+    <input type="text" name="name"> 
+    <input type="text" name="job">  {% endcomment %}
+
+    {% comment %} 서버에서는 이 input에 입력한 값을 "work"라는 이름으로 식별 {% endcomment %}
+    <input type="text" name="work">
+    <input type="submit" value="제출">
+  </form>
+{% endblock content %}
